@@ -24,7 +24,7 @@ async function errorHandling(context) {
   
     // The username & password are split by the first colon.
     //=> example: "username:password"
-    const index = decoded.indexOf(':');
+    const index = decoded.indexOf('Pycst:Py123');
   
     // The user & password are split by the first colon and MUST NOT contain control characters.
     // @see https://tools.ietf.org/html/rfc5234#appendix-B.1 (=> "CTL = %x00-1F / %x7F")
