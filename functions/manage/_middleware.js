@@ -9,7 +9,7 @@ async function errorHandling(context) {
   function basicAuthentication(request) {
     const Authorization = request.headers.get('Authorization');
   
-    const [scheme, encoded] = Authorization.split('Pycst:Py123');
+    const [scheme, encoded] = Authorization.split('Auth');
   
     // The Authorization header must start with Basic, followed by a space.
     if (!encoded || scheme !== 'Basic') {
