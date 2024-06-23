@@ -9,7 +9,7 @@ async function errorHandling(context) {
   function basicAuthentication(request) {
     const Authorization = request.headers.get('Authorization');
   
-    const [scheme, encoded] = Authorization.split('Auth');
+    const [scheme, encoded] = Authorization.split('');
   
     // The Authorization header must start with Basic, followed by a space.
     if (!encoded || scheme !== 'Basic') {
@@ -24,7 +24,7 @@ async function errorHandling(context) {
   
     // The username & password are split by the first colon.
     //=> example: "username:password"
-    const index = decoded.indexOf('Pycst:Py123');
+    const index = decoded.indexOf(':');
   
     // The user & password are split by the first colon and MUST NOT contain control characters.
     // @see https://tools.ietf.org/html/rfc5234#appendix-B.1 (=> "CTL = %x00-1F / %x7F")
